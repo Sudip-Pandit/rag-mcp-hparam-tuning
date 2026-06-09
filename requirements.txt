@@ -1,0 +1,21 @@
+# Core (the repo runs offline with NONE of these installed).
+# Install only what you need for live API mode.
+
+# --- RAG live mode ---
+openai>=1.30.0
+tiktoken>=0.7.0
+pinecone-client>=4.0.0
+sentence-transformers>=2.7.0
+cohere>=5.5.0
+
+# --- MCP live mode ---
+anthropic>=0.34.0
+
+# --- Optional sweep tooling referenced in the article ---
+# optuna>=3.6.0
+# ragas>=0.1.0
+
+# --- Utilities ---
+numpy>=1.26.0
+scikit-learn>=1.4.0
+pyyaml>=6.0

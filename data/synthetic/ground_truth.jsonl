@@ -1,0 +1,8 @@
+{"id": "d0", "text": "Set temperature to 0.0 for factual question answering. Higher temperature increases hallucination in grounded RAG tasks."}
+{"id": "d1", "text": "chunk_size determines retrieval precision and is locked at index time. A bad chunking decision is a permanent tax until you re-index."}
+{"id": "d2", "text": "similarity_threshold above 0.72 prevents confident answers on off-topic queries. Without it the LLM uses irrelevant context."}
+{"id": "d3", "text": "A reranker is a cross-encoder that scores query-chunk pairs. The two-stage pattern retrieves top_k then reranks to top_n for better precision."}
+{"id": "d4", "text": "top_k controls how many chunks you retrieve. top_k=20 triples latency and cost for marginal quality gain compared to top_k=8."}
+{"id": "d5", "text": "In MCP agents, set temperature 0.0 for tool calling to avoid tool name hallucination. Always define max_steps and an execution budget."}
+{"id": "d6", "text": "Destructive tools must be gated behind human confirmation. require human approval before close or delete operations."}
+{"id": "d7", "text": "memory_window_turns controls how many conversation turns are sent each call. Larger windows cost more; summarize evicted turns."}

@@ -1,0 +1,27 @@
+# experiments/sweep_config.yaml
+# Grid for scripts/run_sweep.py. The script reads SWEEP_GRID in code by default;
+# this file documents the canonical search space and the A/B canary config.
+
+sweep_grid:
+  chunk_size: [128, 256, 512, 1024]
+  chunk_overlap: [0, 32, 64, 128]
+  top_k: [4, 8, 12, 20]
+  use_reranker: [true, false]
+  temperature: [0.0, 0.1, 0.3]
+  max_tokens: [256, 512, 1024]
+
+max_experiments: 50
+optimize_for: faithfulness   # tie-break on avg_cost then latency_p95
+
+# A/B canary (Part 5.3)
+experiment:
+  name: top_k_increase_test
+  control:
+    top_k: 5
+    temperature: 0.0
+  treatment:
+    top_k: 8
+    temperature: 0.0
+  traffic_split: 0.05
+  metrics: [hit_rate, mrr, cost_per_query, latency_p95]
+  min_samples: 500
