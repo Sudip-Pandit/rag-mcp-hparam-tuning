@@ -7,7 +7,7 @@ Every hyperparameter discussed in the article is a real, tunable knob here. The 
 ## Quick start
 
 ```bash
-git clone https://github.com/Sudip-Pandit/rag-mcp-hparam-tuning.git
+git clone https://github.com/Sudip-Pandit/rag-mcp-hyperparameter-tuning.git
 cd rag-mcp-hparam-tuning
 
 # Offline mode needs nothing installed. To run the whole tour:
