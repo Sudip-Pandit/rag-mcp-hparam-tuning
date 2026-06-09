@@ -1,13 +1,13 @@
 # RAG + MCP Hyperparameter Tuning
 
-Runnable companion code for the article **"I Ran 50 Hyperparameter Experiments on a Production RAG System — Two Parameters Did 80% of the Work."**
+Runnable companion code for the article **[I Ran 50 Hyperparameter Experiments on a Production RAG System — Two Parameters Did 80% of the Work](https://levelup.gitconnected.com/i-ran-50-hyperparameter-experiments-on-a-production-rag-system-two-parameters-did-80-of-the-work-01c612422135)**.
 
 Every hyperparameter discussed in the article is a real, tunable knob here. The whole repo **runs offline with zero API keys** (local hashing embeddings, an in-memory vector store, a deterministic planner). Drop in `OPENAI_API_KEY`, `PINECONE_API_KEY`, `COHERE_API_KEY`, or `ANTHROPIC_API_KEY` to switch any stage to live mode.
 
 ## Quick start
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Sudip-Pandit/rag-mcp-hparam-tuning.git
 cd rag-mcp-hparam-tuning
 
 # Offline mode needs nothing installed. To run the whole tour:
@@ -101,6 +101,10 @@ MCP: `temperature=0.0` for tool calls, define `stop_sequences`, set `max_steps` 
 - **Pinecone**: pass a real index object into `RAGPipeline(index=...)`; the `retrieve_chunks` contract is identical.
 - **Cohere reranker**: `RerankerConfig(use_cohere=True)` with `COHERE_API_KEY`.
 - **Anthropic MCP**: set `ANTHROPIC_API_KEY` to drive the agent with a live model (the offline planner stays available for deterministic tests).
+
+## Author
+
+Written by Sudip Pandit. Read the full walkthrough in the [companion article](https://levelup.gitconnected.com/i-ran-50-hyperparameter-experiments-on-a-production-rag-system-two-parameters-did-80-of-the-work-01c612422135), and follow along on [Medium](https://medium.com/@banisusan045) for more on production RAG, MCP, and AI engineering.
 
 ## License
 
