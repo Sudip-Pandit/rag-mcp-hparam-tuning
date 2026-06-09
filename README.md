@@ -104,7 +104,7 @@ MCP: `temperature=0.0` for tool calls, define `stop_sequences`, set `max_steps` 
 
 ## Author
 
-Written by Sudip Pandit. Read the full walkthrough in the [companion article](https://levelup.gitconnected.com/i-ran-50-hyperparameter-experiments-on-a-production-rag-system-two-parameters-did-80-of-the-work-01c612422135), and follow along on [Medium](https://medium.com/@banisusan045) for more on production RAG, MCP, and AI engineering.
+Written by Sudip P. Read the full walkthrough in the [companion article](https://levelup.gitconnected.com/i-ran-50-hyperparameter-experiments-on-a-production-rag-system-two-parameters-did-80-of-the-work-01c612422135), and follow along on [Medium](https://medium.com/@banisusan045) for more on production RAG, MCP, and AI engineering.
 
 ## License
 
